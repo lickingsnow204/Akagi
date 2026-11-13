@@ -50,7 +50,7 @@ fn parse_notify_line(line: &str) -> Result<Option<Notification>, serde_json::Err
 /// Default per-call timeout. Mahjong turn budget is several seconds; 5 s
 /// is well above legitimate NN inference cost (Mortal ≈ 100 ms) and below
 /// any user-perceptible hang.
-const DEFAULT_REACT_TIMEOUT_MS: u64 = 5_000;
+const DEFAULT_REACT_TIMEOUT_MS: u64 = 20_000;
 
 /// Grace period for graceful shutdown on `reset()`. End_game is written,
 /// child usually exits within a few hundred ms; we wait this long before
